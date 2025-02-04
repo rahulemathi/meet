@@ -19,3 +19,6 @@ Route::middleware([
         return view('home.index');
     });
 });
+
+Route::get('/migrate', function() { \Illuminate\Support\Facades\Artisan::call('migrate'); });
+
