@@ -14,7 +14,7 @@
     <script>
         const domain = "meet.jit.si";
         const options = {
-            roomName: "Rahul1234",
+            roomName: "Rahul1234", 
             width: "100%",
             height: 600,
             parentNode: document.querySelector("#meet"),
