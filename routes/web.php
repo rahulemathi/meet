@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 
 Route::get('/', function () {
     return view('welcome');
@@ -20,5 +21,8 @@ Route::middleware([
     });
 });
 
-Route::get('/migrate', function() { \Illuminate\Support\Facades\Artisan::call('migrate'); });
+Route::get('/config-clear', function() {
+    Artisan::call('config:clear');
+    return "Config cache is cleared";
+});
 
